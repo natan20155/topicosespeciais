@@ -1,0 +1,7 @@
+git --version = verifica a versão do git
+
+git init = inicia um repositorio vazio na pasta atual
+
+git --global user.name "nome"= cria usuario do git
+
+git --global user.email "email"= cria o email do usuario que fara o commit
