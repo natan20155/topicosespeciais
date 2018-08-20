@@ -5,3 +5,17 @@ git init = inicia um repositorio vazio na pasta atual
 git --global user.name "nome"= cria usuario do git
 
 git --global user.email "email"= cria o email do usuario que fara o commit
+
+git status = verifica tudo q n foi salvo
+
+git  add. = colocar os arquivos na area de tranferencia7
+git commit -m "mensagem" = dizer uma mensagem para identificar o commit q vc esta fazendo
+
+git log = mostra todos os logs dos commits realizados
+
+git remote add origin link = vincula a pasta local ao repositorio do git
+
+git push -u origin master = fazer commit pela primeira vez
+
+
+https://github.com/natan20155/topicosespeciais.git
