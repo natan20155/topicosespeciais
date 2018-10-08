@@ -1,4 +1,4 @@
-package fvs.edu.br.topicos.services;
+package fvs.edu.br.topicos.service;
 
 import java.util.Optional;
 
@@ -10,15 +10,13 @@ import fvs.edu.br.topicos.repositories.CategoriaRepository;
 
 @Service
 public class CategoriaService {
-
 	@Autowired
 	private CategoriaRepository repositorio;
-	
 	
 	public Categoria buscar(Integer id) {
 		Optional<Categoria> obj = repositorio.findById(id);
 		
 		return obj.orElse(null);
-		}
-	
+		
+	}
 }

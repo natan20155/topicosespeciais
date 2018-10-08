@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import fvs.edu.br.topicos.domain.Categoria;
-import fvs.edu.br.topicos.services.CategoriaService;
+import fvs.edu.br.topicos.service.CategoriaService;
 
 @RestController
 @RequestMapping(value="/categorias")
@@ -17,13 +17,11 @@ public class CategoriaResource {
 	@Autowired
 	private CategoriaService service;
 	
-	
 	@RequestMapping(value="/{id}", method=RequestMethod.GET)
 	public ResponseEntity<?> listar(@PathVariable Integer id) {
 		Categoria obj = service.buscar(id);
 		
-		return ResponseEntity.ok().body(obj);
 		
+		return ResponseEntity.ok().body(obj);
 	}
-	
 }
