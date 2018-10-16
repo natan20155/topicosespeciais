@@ -26,11 +26,10 @@ public class ProjetoTopicosEspeciaisApplication implements CommandLineRunner{
 	ProdutoRepository prodRepository;
 	
 	@Autowired
-	CidadeRepository cidadeRepository;
+	CidadeRepository cidRepository;
 	
 	@Autowired
-	EstadoRepository estadoRepository;
-	
+	EstadoRepository estRepository;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(ProjetoTopicosEspeciaisApplication.class, args);
@@ -59,16 +58,13 @@ public class ProjetoTopicosEspeciaisApplication implements CommandLineRunner{
 		Estado est2 = new Estado(null, "Ceará");
 		
 		Cidade c1 = new Cidade(null, "Uberlândia", est1);
-		Cidade c2 = new Cidade(null, "Icó", est2);
+		Cidade c2 = new Cidade(null, "Iguatu", est2);
 		Cidade c3 = new Cidade(null, "Sobral", est2);
 		
 		est1.getCidades().addAll(Arrays.asList(c1));
 		est2.getCidades().addAll(Arrays.asList(c2, c3));
 		
-		estadoRepository.saveAll(Arrays.asList(est1, est2));
-		cidadeRepository.saveAll(Arrays.asList(c1, c2, c3));
-		
-		
-	
+		estRepository.saveAll(Arrays.asList(est1, est2));
+		cidRepository.saveAll(Arrays.asList(c1, c2, c3));
 	}	
 }
